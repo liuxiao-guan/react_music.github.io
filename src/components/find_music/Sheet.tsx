@@ -8,8 +8,7 @@ export default function Sheet() {
     const history = useNavigate()
     return (
         <div>
-            {/* <IndexTopMenu/> */}
-            <div id='sheet' style={{textAlign: 'center', position: 'absolute', top: '50%', left: '50%', fontSize: 40}}>
+            <div id='sheet' className="findMusic">
                 歌单
                 <br/>
                 <Button onClick={() => {

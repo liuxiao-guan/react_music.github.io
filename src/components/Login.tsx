@@ -2,10 +2,6 @@ import React, {useState} from "react";
 import {Form, Input, Button, Alert} from 'antd'
 import {useNavigate} from 'react-router-dom'
 import 'antd/dist/antd.css'
-import './login.css'
-import axios from 'axios'
-import ReactDOM from "react-dom";
-import {search} from "./utils/search";
 import {login} from "./utils/login";
 
 const FormItem = Form.Item;

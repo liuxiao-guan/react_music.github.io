@@ -4,21 +4,9 @@
     bottom: 15%;
     width: 58px;
     height: 52px;
-    background-color: rgb(219, 24, 17);
-    border: 1px solid rgb(172, 22, 3);
+    background-color: #fa1a1ad9;
     border-radius: 4px;
     font-size: 12px;
-  
-    /* &:before {
-      content: '▲';
-      display: block;
-      text-align: center;
-      color: #aaa;
-      line-height: 42px;
-    }
-    &:hover:before {
-      content: '回顶部';
-    } */
 }
 .top-jumper::before{
     content: '▲';

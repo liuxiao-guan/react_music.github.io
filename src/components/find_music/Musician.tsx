@@ -8,9 +8,7 @@ export default function Musician() {
     const history = useNavigate()
     return (
         <div>
-            {/* <IndexTopMenu/> */}
-            <div id='musician'
-                 style={{textAlign: 'center', position: 'absolute', top: '50%', left: '50%', fontSize: 40}}>
+            <div id='musician' className="findMusic">
                 歌手列表
                 <br/>
                 <Button onClick={() => {

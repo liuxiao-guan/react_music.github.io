@@ -1,3 +1,8 @@
+### ！！！项目调用API需要经过whistle配置，因为无法直接访问https://cloud-music.pl-fe.cn/ 需要将 http://cloud-music.pl-fe.cn/代理一下。 
+
+--- 
+
+
 # 基于React的网易云音乐
 
 

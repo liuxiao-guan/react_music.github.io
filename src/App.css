@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+.myFooter{
+  text-align: center;
+  padding: 10px 10% 10px 10%;
+  bottom: 0;
+}
+.findMusic{
+  text-align: center;
+  height: 800px;
+  font-size: 40px;
+}
+.carousel{
+  padding: 15px;
+  /* width: 80%; */
+  /* height: auto; */
+	/* display:flex; */
+	/* justify-content:center; */
+}
+#test{
+  position:fixed;
+  right:0;
+  bottom:0 
+  
+}
+
+.container{
+  padding: 0 10% 0 10%; 
+  background-color: #ebe8e8;   
+}
+
+.title{
+  color: rgb(63, 63, 63);
+  margin: 0;
+}
+.title #keyword{
+  margin:20px 10px 0 0;
+  font-size: 35px;
+  color: rgb(29, 21, 23);
+}
+.list{
+  padding: 2% 15% 5% 15% ;
+}
+.pages{
+  text-align: center;
+  margin:0 10px 0 10px;
+  padding: 0 0 15px 0;
+  display: flexbox;
+  flex-flow: row nowrap;
+  justify-content:center;
+  align-items:center;
+}
+#TopMenu{
+  text-align: center;
+  /* width: 1920px; */
+  padding: 24px;
+  font-size: 24px;
+}
+.login-form{
+  width: 300px;
+  margin: 100px auto 0;
+}
+#login-button{
+  width: 100%;
+}

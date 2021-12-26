@@ -8,9 +8,7 @@ export default function RecommendMusic() {
     const history = useNavigate()
     return (
         <div>
-            {/* <IndexTopMenu/> */}
-            <div id='recommend'
-                 style={{textAlign: 'center', position: 'absolute', top: '50%', left: '50%', fontSize: 40}}>
+            <div id='recommend' className="findMusic">
                 推荐音乐
                 <br/>
                 <Button onClick={() => {

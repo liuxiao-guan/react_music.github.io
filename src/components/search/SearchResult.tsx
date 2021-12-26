@@ -2,18 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import HeartTwoTone from '@ant-design/icons/lib/icons/HeartTwoTone';
 import { search } from "../utils/search";
-import './SearchResult.css';
 import { Avatar, Button, List, Menu, Result, Skeleton, Table } from "antd";
-import { PlayCircleOutlined , DownloadOutlined } from "@ant-design/icons/lib/icons";
+import { PlayCircleOutlined, DownloadOutlined } from "@ant-design/icons/lib/icons";
 import TopJumper from "../detail/TopJumper";
-// import SearchResultList from "./SearchResultList";
-
-//封装歌曲结果对象
-/*
-* 不得不吐槽一下Typescript要求真多，这些参数是通过报错信息找到的，
-* 如果想看，可以在下面渲染的时候，在map中把value的类型去掉，并在li的渲染中直接渲染value，react会在报错信息中提示
-* 还不太清楚各个参数具体的类型，所以暂时都使用any
-* */
+import Test from "./test";
 interface SongProps {
     id: any,
     name: any,
@@ -116,36 +108,15 @@ export default function SearchResult() {
             goPage(1);
         }
     })
-    // console.log(keyword);
-    // search({
-    //     keywords: keyword,
-    //     limit: result.limit,
-    //     offset: (result.page - 1) * result.limit,
-    //     type: result.type,
-    // }).then((response) => {
-    //     let res = response.data;
-    //     // console.log(res.code)
-    //     if (res.code === 200) {
-    //         setResult({
-    //             songList: res.result.songs,
-    //             total: res.result.songCount,
-    //             type: result.type,
-    //             limit: result.limit,
-    //             page: result.page,
-    //             playList: result.playList,
-    //             mvList: result.mvList,
-    //         })
-    //     }
-    // })
 
     return (
         <div>
             <Menu theme='light' mode="horizontal">
                 <Menu.Item key="song">单曲</Menu.Item>
-                <Menu.Item>歌手</Menu.Item>
-                <Menu.Item>专辑</Menu.Item>
-                <Menu.Item>视频</Menu.Item>
-                <Menu.Item onClick={(e) => showPlayList(keyword, e)}>歌单</Menu.Item>
+                <Menu.Item key="singer">歌手</Menu.Item>
+                <Menu.Item key="album">专辑</Menu.Item>
+                <Menu.Item key="vedio">视频</Menu.Item>
+                <Menu.Item key="songList" onClick={(e) => showPlayList(keyword, e)}>歌单</Menu.Item>
             </Menu>
 
             <div className="container">
@@ -177,6 +148,7 @@ export default function SearchResult() {
                                     })}
                                     </div>}
                             />
+                            {/* <Test sid={item.id}/> */}
                             <div style={{ margin: 10 }}>时长  {new Date(item.duration).getMinutes()}:{new Date(item.duration).getSeconds()}</div>
                             {console.log(item)}
                             <div><PlayCircleOutlined />  <HeartTwoTone twoToneColor="#fa1a1a" />
@@ -185,7 +157,6 @@ export default function SearchResult() {
                         </List.Item>
                     )}
                 />
-
                 <div className="pages">
                     <Button onClick={previousPage} disabled={hasPrevious()}>上一页</Button>
                     <Button onClick={nextPage}>下一页</Button>
@@ -194,14 +165,7 @@ export default function SearchResult() {
                     <Button onClick={submitInputPage}>跳转到此页</Button>
                 </div>
             </div>
-        <TopJumper/>
+            <TopJumper />
         </div>
     );
 }
-// function search(keywords:any){
-//     return axios.get("http://localhost:3000/search",{
-//         params:{
-//             keywords,
-//         }
-//     })
-// }

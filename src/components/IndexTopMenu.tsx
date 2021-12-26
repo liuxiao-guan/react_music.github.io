@@ -1,9 +1,8 @@
 import { Menu } from 'antd'
-import { CustomerServiceOutlined, HeartOutlined} from '@ant-design/icons'
+import { CustomerServiceOutlined, HeartOutlined } from '@ant-design/icons'
 import React from 'react'
 import { Link, Routes, HashRouter as Router, Route } from 'react-router-dom'
 import SearchTop from './search/SearchTop'
-import './IndexTopMenu.css'
 import RecommendMusic from './find_music/RecommendMusic'
 
 const { SubMenu } = Menu
@@ -17,18 +16,18 @@ class IndexTopMenu extends React.Component {
   handleClick = (e: { key: any; }) => {
     this.setState({ current: e.key })
   }
-  recommendClick= () =>{
-      this.setState({
-          current:'mail',
-          redirect:this.state.redirect++,
-      })
-      console.log(this.state.redirect)
-      return(
-        <Routes>
-            <Route path="/recommend" element={<RecommendMusic/>}>
-            </Route>
-        </Routes>
-      );
+  recommendClick = () => {
+    this.setState({
+      current: 'mail',
+      redirect: this.state.redirect++,
+    })
+    console.log(this.state.redirect)
+    return (
+      <Routes>
+        <Route path="/recommend" element={<RecommendMusic />}>
+        </Route>
+      </Routes>
+    );
   }
 
 

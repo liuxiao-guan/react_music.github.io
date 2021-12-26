@@ -8,8 +8,7 @@ export default function TopMusic() {
     const history = useNavigate()
     return (
         <div>
-            {/* <IndexTopMenu/> */}
-            <div id='top' style={{textAlign: 'center', position: 'absolute', top: '50%', left: '50%', fontSize: 40}}>
+            <div id='top' className="findMusic">
                 最热门音乐
                 <br/>
                 <Button onClick={() => {

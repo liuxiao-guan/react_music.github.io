@@ -8,7 +8,9 @@ class Detail extends React.Component {
     render() {
         return (
             <div>
-            <><Lyric /><p></p><Comment /><TopJumper /></>   
+                <Lyric />
+                <Comment />
+                <TopJumper />
             </div>
         );
     }

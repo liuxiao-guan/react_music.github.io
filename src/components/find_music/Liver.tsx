@@ -9,8 +9,7 @@ export default function Liver() {
     const history = useNavigate()
     return (
         <div>
-            {/* <IndexTopMenu/> */}
-            <div id='liver' style={{textAlign: 'center', position: 'absolute', top: '50%', left: '50%', fontSize: 40}}>
+            <div id='liver' className="findMusic">
                 电台
                 <br/>
                 <Button onClick={() => {

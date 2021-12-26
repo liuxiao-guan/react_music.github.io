@@ -3,7 +3,6 @@ interface Iprops{
     id:any,
     limit:number,
     offset:number,
-    //before:string,
 }
 export const comment=(props:Iprops)=>{
     return request({
