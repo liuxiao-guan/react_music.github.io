@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/WebstormProjects/Homework2/.idea/Homework2.iml" filepath="$USER_HOME$/WebstormProjects/Homework2/.idea/Homework2.iml" />
+      <module fileurl="file://$USER_HOME$/WebstormProjects/NeteaseCloudMusicApi/.idea/NeteaseCloudMusicApi.iml" filepath="$USER_HOME$/WebstormProjects/NeteaseCloudMusicApi/.idea/NeteaseCloudMusicApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/netease_music.iml" filepath="$PROJECT_DIR$/.idea/netease_music.iml" />
+      <module fileurl="file://$USER_HOME$/WebstormProjects/webmusic-react/.idea/webmusic-react.iml" filepath="$USER_HOME$/WebstormProjects/webmusic-react/.idea/webmusic-react.iml" />
+    </modules>
+  </component>
+</project>
