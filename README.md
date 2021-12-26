@@ -1,6 +1,7 @@
 ### ！！！项目调用API需要经过whistle配置，因为无法直接访问https://cloud-music.pl-fe.cn/ 需要将 http://cloud-music.pl-fe.cn/代理一下。 
+ ![ISTZW7SMC8H5JNO1N6T2Z}N](https://user-images.githubusercontent.com/67271172/147412548-6959f44b-9452-47d6-8c7a-1fbf6972e1d8.png)
+ -----
 
---- 
 
 
 # 基于React的网易云音乐
@@ -56,8 +57,4 @@ Typescript+React+Ant Design(https://ant.design/index-cn)
 > 这里配置了网易云API的URL，如果要改，那么只改value,key不要改<br/><br/>
 > 其他的是脚手架生成的
 
-##待办:
-不太清楚都要写哪些页面<br/>
-大部分页面的css都没写<br/>
-各大页面渲染还没写
 
