@@ -1,0 +1,26 @@
+﻿
+.container{
+    padding: 0 10% 0 10%; 
+    background-color: #ebe8e8;   
+}
+
+.title{
+    color: rgb(63, 63, 63);
+    margin: 0;
+}
+.title #keyword{
+    margin:20px 10px 0 0;
+    font-size: 35px;
+    color: rgb(29, 21, 23);
+}
+.list{
+    padding: 2% 15% 5% 15% ;
+}
+.pages{
+    margin:0 0 2% 20%;
+    padding: 0 0 15px 0;
+    display: flexbox;
+    flex-flow: row nowrap;
+    justify-content:center;
+    align-items:center;
+}
