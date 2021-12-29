@@ -1,7 +1,8 @@
 <<<<<<< HEAD
 
 ### ！！！项目调用API需要经过whistle配置，因为无法直接访问https://cloud-music.pl-fe.cn/ 需要将 http://cloud-music.pl-fe.cn/代理一下。
-https://github.com/liuxiao-guan/react_music.github.io/raw/master/QQ%E5%9B%BE%E7%89%8720211226233532.png
+![img](https://github.com/liuxiao-guan/react_music.github.io/raw/master/QQ%E5%9B%BE%E7%89%8720211226233532.png
+)
 ---
 
 # 基于React的网易云音乐
