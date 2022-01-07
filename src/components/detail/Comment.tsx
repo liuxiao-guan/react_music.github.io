@@ -99,6 +99,9 @@ export default function Comment() {
     const hasPrevious = () => {
         return counter === 1;
     }
+    const hasNext = () => {      
+        return counter === (Math.floor(result.total/result.limit) + 1);
+    }
     const goPage = (pageNum: number) => {
         counter = pageNum;
         comment({
@@ -154,7 +157,7 @@ export default function Comment() {
         window.open(`#/detail/${id}`, '_self')
     }
     useEffect(() => {
-        if (counter === 0) {
+        if (counter === 0|| counter === 1) {
             goPage(1);
         }
     })
@@ -216,7 +219,7 @@ export default function Comment() {
             />
             <div className="pages" style={{ margin: "0 10% 0 10%" }}>
                 <Button onClick={previousPage} disabled={hasPrevious()}>上一页</Button>
-                <Button onClick={nextPage}>下一页</Button>
+                <Button onClick={nextPage} disabled={hasNext()}>下一页</Button>
                 请输入您想跳转的页面:<input value={inputPageNum} onChange={handleInput} />
                 <Button onClick={submitInputPage}>跳转到此页</Button>
             </div>

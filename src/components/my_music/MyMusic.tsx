@@ -6,7 +6,7 @@ export default function MyMusic(){
     console.log("myMusic")
     return(
         <div>
-        <div id="my" style={{textAlign:'center',position:'absolute',top:'50%',left:'50%',fontSize:40}}>
+        <div id="my" className="findMusic">
             我的音乐
             <br/>
             <Button onClick={() => {

@@ -11,12 +11,13 @@ import NotFound from "./NotFound";
 import SearchResult from "./search/SearchResult";
 import Detail from "./detail/Detail";
 import IndexTopMenu from "./IndexTopMenu";
+import SearchTop from "./search/SearchTop";
 //各界面的路由，当写了新的页面时，请在这里添加路由
 export default function ProjectRouter() {
     //当输入的地址没有任何匹配时，跳转到404页面
     return (
-        <Router>
-            <IndexTopMenu />
+        <Router>       
+            <IndexTopMenu />     
             <div>
                 <Routes>
                     <Route path='/' element={<IndexContent />} />

@@ -10,7 +10,7 @@ export const createThrottle = (
   thisArg?: unknown
 ): Function => {
   let lastInvokeTime: number = Date.now();
-  const _delay = Number(delay) || 200
+  const _delay = Number(delay) || 200 //或运算符，真前假后
   return (...args: any[]): void => {
     const now = Date.now()
     if (now - _delay <= lastInvokeTime) {

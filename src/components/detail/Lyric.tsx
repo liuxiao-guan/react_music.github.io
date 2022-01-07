@@ -37,7 +37,12 @@ export default function Lyric() {
         return counter === 1;
     }
     const goPage = (pageNum: number) => {
-        counter = pageNum;
+        // if(counter === parseInt(id as string)){
+        //     counter = 0;
+        // }else{
+        //     counter =parseInt(id as string);
+        // }     
+       // counter = 1;
         lyric({
             id: id as string,
         }).then((response) => {
@@ -86,18 +91,17 @@ export default function Lyric() {
         window.open('#/detail', '_self');
     }
     useEffect(() => {
-        if (counter === 0) {
-            goPage(1);
-        }
-    })
+            goPage(1);   
+        //组件第一次渲染结束后执行函数
+    },[])
 
     return (
         <div>
             <ul style={{ margin: "2% 10% 40px 10%" }}>
                 {result.lyricList.map((value: lyricmodel, index) => {
                     return (
-                        <li key={index} onClick={goDetail}>
-                            {value.time}-----------歌词:{value.lyc}
+                        <li key={index} >
+                            {value.time}-----------:{value.lyc}
                         </li>
                     );
                 })}

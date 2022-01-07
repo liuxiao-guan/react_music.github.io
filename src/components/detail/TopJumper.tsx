@@ -12,7 +12,7 @@ function TopJumper() {
       }
     }, 500) as EventListener;
     document.addEventListener('scroll', listener);
-    return () => document.removeEventListener('scroll', listener);
+    return () => document.removeEventListener('scroll', listener);// 组件销毁后，取消监听
   }, [show])
 
   return show ? (
@@ -22,3 +22,4 @@ function TopJumper() {
 }
 
 export default TopJumper;
+//浏览器滚动事件调用频繁，会造成一定的性能问题。

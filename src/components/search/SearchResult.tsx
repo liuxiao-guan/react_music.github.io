@@ -61,6 +61,10 @@ export default function SearchResult() {
     const hasPrevious = () => {
         return counter === 1;
     }
+    const hasNext = () => {
+        
+        return counter === (Math.floor(result.total/result.limit) + 1);
+    }
     const goPage = (pageNum: number) => {
         counter = pageNum;
         search({
@@ -104,7 +108,7 @@ export default function SearchResult() {
         window.open(`#/searchplaylist/${keyword}`, '_self');
     }
     useEffect(() => {
-        if (counter === 0) {
+        if (counter === 0||counter===1) {
             goPage(1);
         }
     })
@@ -159,7 +163,7 @@ export default function SearchResult() {
                 />
                 <div className="pages">
                     <Button onClick={previousPage} disabled={hasPrevious()}>上一页</Button>
-                    <Button onClick={nextPage}>下一页</Button>
+                    <Button onClick={nextPage} disabled={hasNext()}>下一页</Button>
                     <span>请输入您想跳转的页面:</span>
                     <input style={{ width: 40 }} value={inputPageNum} onChange={handleInput} />
                     <Button onClick={submitInputPage}>跳转到此页</Button>

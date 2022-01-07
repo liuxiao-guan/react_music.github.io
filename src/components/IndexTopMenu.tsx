@@ -35,7 +35,9 @@ class IndexTopMenu extends React.Component {
     const { current, redirect } = this.state
     return (
       <nav>
+        
         <Menu
+          // theme='light'
           theme='dark'
           // style={{width:1920,padding:16,fontSize:16}}
           onClick={this.handleClick}
@@ -66,13 +68,15 @@ class IndexTopMenu extends React.Component {
               </Link></Menu.Item>
             </Menu.ItemGroup>
           </SubMenu>
-          <Menu.Item key='myMusic' icon={<HeartOutlined />}>
-            <Link to='/my'>
-              我的音乐
-            </Link>
-          </Menu.Item>
-          <SearchTop />
+          <SubMenu title="我的音乐"  onTitleClick={()=>{window.open(`#/my`, '_self');}} icon={<HeartOutlined />}>            
+          </SubMenu>
+          <SearchTop/>
+          {/* <Menu.Item key='search'  style={{margin:"0 0 0 0",padding:"0 0 0 0"}}> */}
+          
+          {/* </Menu.Item>
+           */}
         </Menu>
+       
       </nav>
     )
   }
